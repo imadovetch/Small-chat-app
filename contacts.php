@@ -2,7 +2,7 @@
     session_start();
 
     if(!isset($_SESSION['unique_id'])){
-        header("Location: chat/loginpage.php");
+        header("Location: loginpage.php");
     }
 ?>
 
@@ -29,22 +29,34 @@
             </div>
             <button class="disconnect-button">Disconnect</button>
         </div>
-        <div class="contacts-title">Available Contacts</div>
+        <div class="contacts-grps">
+            <div id="individuel" class="contacts-title">Available Contacts</div>
+            <div id="groups" class="contacts-title">Available Groups</div>
+        </div>
+        <div class="groupscontainer">
+                <button class="addgroup">Add</button>
+                <div class="group-input" style="display: none;">
+                         <form action="" method="post" id="group-form">
+                             <label for="group-name">Name the group</label>
+                                <input name="getterid"  type="text" id="group-name">
+                        </form>
+                </div>
+                <div class="chatersgroupes">
+                    <div class="groupchat"><img src="" alt="">groupe 1</div></a>
+                    <div class="groupchat"><img src="" alt="">groupe2</div>
+                    <div class="groupchat"><img src="" alt="">groupe 1</div>
+                    <div class="groupchat"><img src="" alt="">groupe2</div>
+                </div>
+        </div>
+
         <div class="chaters">
         
-            <a style="text-decoration: none;" href=""><div class="user">
-                <img src="images/download.jpg" alt="">
-                <div class="usernamestatus">
-                    <div class="name">imad bouderoua</div>
-                    <div class="status">online <i class="fa-solid fa-circle"></i></div>
-                </div>
-            </div></a>
-           
         </div>
 
     </div>
 </body>
-<script src="jsfiles/user.js"></script>
+<script ></script>
+<script src="jsfiles/chatgrps.js"></script>
 </html>
 <script>
     

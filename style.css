@@ -203,11 +203,7 @@ input[type="file"] {
     color: #00FF00;
 }
 
-.contacts-title {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+
 
 .owner {
     border-bottom: 2px solid #00FF00;
@@ -444,3 +440,131 @@ input[type="file"] {
 .return {
     margin-right: 100%;
 }
+/* second part groupes */
+.contacts-grps {
+    display: flex;
+    padding: 3% 10%;
+    background-color: #1E1E1E;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1%;
+  }
+  
+  .contacts-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00ff00;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    text-align: center;
+  }
+  
+  .contacts-title:hover {
+    background-color: #2E2E2E;
+    border-color: #33ff33;
+    color: #33ff33;
+  }
+  .groupscontainer {
+    height: 300px;
+    overflow-y: auto;
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 20px;
+    padding: 10px;
+      
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.groupscontainer::-webkit-scrollbar {
+    width: 10px;
+}
+
+.groupscontainer::-webkit-scrollbar-thumb {
+    background-color: #00FF00;
+    border-radius: 10px;
+}
+
+.addgroup {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.addgroup:hover {
+    background-color: #2187b5;
+}
+
+#group-name {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: border 0.3s, background-color 0.3s, color 0.3s;
+}
+
+#group-name:focus {
+    outline: none;
+    border: 1px solid #3498db;
+    background-color: #fff;
+    color: #000;
+}
+
+.chatersgroupes {
+    margin-top: 5%;
+    
+    
+    border-radius: 5px;
+    width: 95%;
+    margin-left: 20px;
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   
+    max-height: 300px;
+}
+
+.groupchat {
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+}
+
+.groupchat img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.groupchat .group-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.groupchat .group-status {
+    font-size: 16px;
+    color: #3498db;
+}
+
+/* end groups */
