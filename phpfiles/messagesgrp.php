@@ -14,9 +14,9 @@ if (isset($_SESSION['unique_id'])) {
     if(mysqli_num_rows($query) > 0){
         while($row = mysqli_fetch_assoc($query)){
             if($row['molchi_idgroupe'] === $molchiid){
-                $output .= '<div class="msgsender"><img class="imgsender" src="images/'.$row['img'].'" alt="">'.$row['messagegroupe'].'</div>';
+                $output .= '<div class="msggroupesender"><img class="imgsender" src="images/'.$row['img'].'" alt="">'.$row['messagegroupe'].'</div>';
             }else{
-                $output .= '<div class="msggetter"> <img class="imggetter" src="images/'.$row['img'].'" alt="">'.$row['messagegroupe'].'</div>';
+                $output .= '<div class="msggroupegetter"> <img class="imggetter" src="images/'.$row['img'].'" alt=""><div class="groupesendername">'.$row['firstname'].' : </div>'.$row['messagegroupe'].'</div>';
 
             }
         }

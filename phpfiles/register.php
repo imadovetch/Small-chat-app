@@ -26,7 +26,7 @@ if (!empty($firstname) && !empty($lastname) && !empty($email) && !empty($passwor
                     $new_img_name = $time . $img_name;
 
                     if (move_uploaded_file($tmp_name, "../images/" . $new_img_name)) {
-                        $status = "online now";
+                        $status = "offline";
                         $uniqueid = rand(time(), 10000000);
 
                         $stmt = $con->prepare("INSERT INTO users (unique_id, firstname, lastname, email, password, img, status) VALUES (?, ?, ?, ?, ?, ?, ?)");

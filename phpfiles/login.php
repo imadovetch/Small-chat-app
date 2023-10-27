@@ -9,7 +9,7 @@ if (!empty($password) && !empty($email)) {
     if (mysqli_num_rows($sql) > 0) {
         $row = mysqli_fetch_assoc($sql);
         $_SESSION['unique_id'] = $row['unique_id'];
-        
+        $sql2 = mysqli_query($con, "UPDATE users SET status = 'online now' WHERE email = '{$email}' AND password = '{$password}'");
         echo 1;
     } else {
         echo "Password or Email incorrect";

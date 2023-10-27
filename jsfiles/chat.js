@@ -22,7 +22,7 @@ returnButton.addEventListener('click', () => {
 
 function sendMessage() {
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost/chat/phpfiles/chatphp.php", true);
+    xhr.open("POST", "phpfiles/chatphp.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
     xhr.onreadystatechange = () => {
@@ -40,7 +40,7 @@ function sendMessage() {
 
 function fetchUserList() {
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost/chat/phpfiles/messages.php", true);
+    xhr.open("POST", "phpfiles/messages.php", true);
 
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {

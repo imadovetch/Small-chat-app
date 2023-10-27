@@ -76,4 +76,6 @@ const disconnectButton = document.querySelector('.disconnect-button');
         };
         xhr.send();
     });
+    
+
 </script>

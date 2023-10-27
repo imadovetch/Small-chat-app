@@ -8,6 +8,7 @@ const groupInput = document.querySelector('#group-name');
 const inputdiv = document.querySelector('.group-input');
 const containergroupes = document.querySelector('.chatersgroupes');
 
+
 let isInputVisible = false; // Track the visibility state
 let isContactsVisible = true; // Track the visibility state of contacts and groups
 
@@ -19,19 +20,28 @@ function fetchUserList(url, container) {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 let data = xhr.responseText;
-                container.innerHTML = data;
+                if (container.innerHTML !== data) {
+                    container.innerHTML = data;
+                }
             }
         }
     };
-
+    
     xhr.send();
 }
 
-// Fetch user list on window load
+// Fetch user list and images on window load
 window.addEventListener('load', () => {
-    fetchUserList("http://localhost/chat/phpfiles/users.php", chaters);
-    fetchUserList("http://localhost/chat/phpfiles/groupes.php", containergroupes);
+    fetchUserList("phpfiles/users.php", chaters);
+    fetchUserList("phpfiles/groupes.php", containergroupes);
+
+    // Periodically check for updates every 500ms
+    setInterval(() => {
+        fetchUserList("phpfiles/users.php", chaters);
+        fetchUserList("phpfiles/groupes.php", containergroupes);
+    }, 500);
 });
+
 
 grpsession.addEventListener("click", () => {
     grpsession.style.backgroundColor = "#5f4141";
