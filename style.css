@@ -322,6 +322,7 @@ input[type="file"] {
 }
 .usernamestatususer .name{
     margin-left: -30%;
+    
 }
 .usernamestatus {
     flex: 1;
@@ -523,6 +524,7 @@ input[type="file"] {
 
 .addgroup {
     background-color: #3498DB;
+    
     color: #FFF;
     border: none;
     border-radius: 5px;

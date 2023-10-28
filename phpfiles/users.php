@@ -25,16 +25,21 @@
                     $lastmsg .= "you :";
                 
                 $lastmsg .= $row2['message'];}
-                $output .= '<a style="text-decoration: none;" href="chat.php?user_id='.$row['unique_id'].'"><div class="user">
-                <img src="images/'. $row['img'].'" alt="">
-                <div class="userdetails">
-                <div class="usernamestatususer">
-                    <div class="name">'. $row['firstname'].  " " . $row['lastname'].'</div>
-                    <div class="status">'.$row['status'].' <i class="fa-solid fa-circle"></i></div>
-                    
+                $output .= '<a style="text-decoration: none;" href="chat.php?user_id='.$row['unique_id'].'">
+    <div class="user">
+        <img src="images/'. $row['img'].'" alt="">
+        <div class="userdetails">
+            <div class="usernamestatususer">
+                <div class="name">'. $row['firstname'].  " " . $row['lastname'].'</div>
+                <div class="status" style="color: '.($row['status'] === 'offline' ? 'red' : '#00FF00').'">
+                    '.$row['status'].' <i style="color: '.($row['status'] === 'offline' ? 'red' : '#00FF00').'" class="fa-solid fa-circle"></i>
                 </div>
-                <div class="last-message">'. $lastmsg.'</div></div>
-            </div></a>';
+            </div>
+            <div class="last-message">'. $lastmsg.'</div>
+        </div>
+    </div>
+</a>';
+
         }
         }
     }else{

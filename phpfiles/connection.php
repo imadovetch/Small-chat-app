@@ -1,5 +1,5 @@
 <?php 
-    $con = mysqli_connect("localhost", "root", "" , "chat");
+    $con = mysqli_connect("localhost", "root", "" , "chat2");
     if($con){
         echo "";
     }else{
